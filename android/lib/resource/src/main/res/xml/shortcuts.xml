@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="connect"
+        android:enabled="true"
+        android:icon="@drawable/icon_notification_connect"
+        android:shortcutShortLabel="@string/shortcut_connect"
+        android:shortcutLongLabel="@string/shortcut_connect_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="net.mullvad.mullvadvpn.connect_action"
+            android:targetPackage="net.mullvad.mullvadvpn"
+            android:targetClass="net.mullvad.mullvadvpn.ui.ShortcutActivity" />
+
+    </shortcut>
+    <shortcut
+        android:shortcutId="disconnect"
+        android:enabled="true"
+        android:icon="@drawable/icon_notification_disconnect"
+        android:shortcutShortLabel="@string/shortcut_disconnect"
+        android:shortcutLongLabel="@string/shortcut_disconnect_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="net.mullvad.mullvadvpn.disconnect_action"
+            android:targetPackage="net.mullvad.mullvadvpn"
+            android:targetClass="net.mullvad.mullvadvpn.ui.ShortcutActivity" />
+    </shortcut>
+</shortcuts>

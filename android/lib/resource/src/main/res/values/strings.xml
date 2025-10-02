@@ -104,6 +104,11 @@
     <string name="reconnect">Reconnect</string>
     <string name="dismiss">Dismiss</string>
     <string name="switch_location">Switch location</string>
+    <string name="shortcut_connect">Connect</string>
+    <string name="shortcut_connect_long">Connect VPN</string>
+    <string name="shortcut_disconnect">Disconnect</string>
+    <string name="shortcut_disconnect_long">Disconnect VPN</string>
+    <string name="shortcut_disabled_message">This shortcut is currently unavailable</string>
     <string name="tcp">TCP</string>
     <string name="udp">UDP</string>
     <string name="blocking_internet">Blocking internet</string>

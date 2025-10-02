@@ -76,6 +76,26 @@
             <intent-filter>
                 <action android:name="net.mullvad.mullvadvpn.request_vpn_permission" />
             </intent-filter>
+
+            <meta-data android:name="android.app.shortcuts"
+                       android:resource="@xml/shortcuts" />
+        </activity>
+        <!--
+            ShortcutActivity
+            Handles shortcut intents and forwards them to the service.
+        -->
+        <activity android:name="net.mullvad.mullvadvpn.ui.ShortcutActivity"
+                  android:exported="true"
+                  android:launchMode="singleInstance"
+                  android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="net.mullvad.mullvadvpn.connect_action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="net.mullvad.mullvadvpn.disconnect_action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <!--
             foregroundServiceType="systemExempted" is required in Android 14+
