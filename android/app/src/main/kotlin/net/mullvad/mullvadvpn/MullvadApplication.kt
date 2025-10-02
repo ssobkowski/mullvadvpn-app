@@ -15,6 +15,7 @@ import net.mullvad.mullvadvpn.service.notifications.accountexpiry.AccountExpiryN
 import net.mullvad.mullvadvpn.usecase.AccountExpiryNotificationActionUseCase
 import net.mullvad.mullvadvpn.usecase.NotificationAction
 import net.mullvad.mullvadvpn.usecase.ScheduleNotificationAlarmUseCase
+import net.mullvad.mullvadvpn.util.ShortcutManagerService
 import org.koin.android.ext.android.getKoin
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.loadKoinModules
@@ -38,6 +39,9 @@ class MullvadApplication : Application() {
         with(getKoin()) {
             get<NotificationChannelFactory>()
             get<NotificationManager>()
+
+            // Initialize shortcut manager service
+            get<ShortcutManagerService>().start()
 
             handleAccountExpiry(
                 scope = get<ApplicationScope>(),

@@ -20,6 +20,7 @@ import net.mullvad.mullvadvpn.lib.shared.ConnectionProxy
 import net.mullvad.mullvadvpn.lib.shared.DeviceRepository
 import net.mullvad.mullvadvpn.lib.shared.LocaleRepository
 import net.mullvad.mullvadvpn.lib.shared.PrepareVpnUseCase
+import net.mullvad.mullvadvpn.util.ShortcutManagerService
 import net.mullvad.mullvadvpn.lib.shared.RelayLocationTranslationRepository
 import net.mullvad.mullvadvpn.repository.UserPreferences
 import net.mullvad.mullvadvpn.repository.UserPreferencesMigration
@@ -62,6 +63,7 @@ val appModule = module {
     single { DeviceRepository(get()) }
     single { UserPreferencesRepository(get(), get()) }
     single { ConnectionProxy(get(), get(), get()) }
+    single { ShortcutManagerService(get(), get(), MainScope()) }
     single { LocaleRepository(get()) }
     single { RelayLocationTranslationRepository(get(), get(), MainScope()) }
     single { ScheduleNotificationAlarmUseCase(get()) }
